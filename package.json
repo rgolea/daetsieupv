@@ -1,0 +1,10 @@
+{
+  "name": "rgolea",
+  "version": "0.0.1",
+  "dependencies": {
+	  "deployd":">0.6.10"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  }
+}
