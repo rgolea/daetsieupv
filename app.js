@@ -7,7 +7,7 @@ var server = deployd({
   db: {
     host: process.env.DB_HOST,
     port: 63789,
-    name: 'heroku_app30742951',
+    name: 'heroku_app31535202',
     credentials: {
       username: process.env.DB_USER,
       password: process.env.DB_PASS
