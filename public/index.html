@@ -1,9 +1,9 @@
 <!DOCTYPE HTML>
-<html lang="en">
+<html ng-app="app">
     <head>
         <!--=============== basic  ===============-->
         <meta charset="UTF-8">
-        <title>DAETSIE UPV</title>
+        <title>Krobs - Creative Onepage Responsive Template</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <meta name="robots" content="index, follow"/>
         <meta name="keywords" content=""/>
@@ -24,6 +24,17 @@
         <link href='http://fonts.googleapis.com/css?family=Raleway:100,300,600,800' rel='stylesheet' type='text/css'>
         <!--=============== google map ===============-->
         <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+        
+        <!--=============== angularJS ===============-->
+        
+        <script src="js/angular/angular.min.js"></script>
+        <script src="js/angular/angular-resource.min.js"></script>
+        <script src="js/angular/angular-sanitize.min.js"></script>
+        <script src="js/angular/angular-cookies.min.js"></script>
+        <script src="js/angular/localization.js"></script>
+        <script src="js/angular/localization_src/localization.langs.js"></script>
+        <script src="js/angular/localization_src/localization.config.js"></script>
+        <script src="js/angular/localization_src/localization.events.js"></script>
     </head>
     <body onLoad="initialize()">
         <!--================= main start ================-->
@@ -46,7 +57,7 @@
                 </div>
                 <!--template navigation-->
                 <nav class="vis"> 
-                    <a href="#" class="active swp"><span class="transition"></span>Home</a>
+                    <a href="#" class="active swp"><span class="transition"></span><any data-i18n="main.home"></any></a>
                     <a href="#" class=" swp"><span class="transition"></span>About</a>
                     <a href="#" class="swp"><span class="transition"></span>Work</a>
                     <a href="#" class="swp"><span class="transition"></span>Contact</a>
@@ -91,19 +102,20 @@
                             <section class="homeholder no-bg">
                                 <div class="content" id="home">
                                     <h2 class="elem">DAETSIE UPV</h2>
-                                    <div class="home-separator"><span></span></div>
+                            <div class="home-separator"><span></span></div>
                                     <div class="tetx-rotator">
                                         <div class="tlt">
-                                            <ul class="texts">
+                                            <ul class="texts" >
                                                 <li>Bienvenidos</li>
                                                 <li>Benvinguts</li>
                                                 <li>Welcome</li>
                                             </ul>
                                         </div>
                                     </div>
-                                    <a href="#" class="button start-button  transition hide-icon"><i class="fa fa-angle-right transition2"></i><span class="text transition color-bg">Castellano</span></a>
-                                    <a href="#" class="button start-button  transition hide-icon"><i class="fa fa-angle-right transition2"></i><span class="text transition color-bg">Valencià</span></a>
-                                    <a href="#" class="button start-button  transition hide-icon"><i class="fa fa-angle-right transition2"></i><span class="text transition color-bg">English</span></a>
+                                    <div ng-controller="langCtrl">
+                                    <a href="#" class="button start-button  transition hide-icon"><i class="fa fa-angle-right transition2"></i><span class="text transition color-bg" ng-click="setLocale('es-ES')">Castellano</span></a>
+                                    <a href="#" class="button start-button  transition hide-icon"><i class="fa fa-angle-right transition2"></i><span class="text transition color-bg" ng-click="setLocale('ca-ES')">Valencià</span></a>
+                                    <a href="#" class="button start-button  transition hide-icon"><i class="fa fa-angle-right transition2"></i><span class="text transition color-bg" ng-click="setLocale('en-US')">English</span></a></div>
                                 </div>
                                 <div class="clearfix"></div>
                             </section>
@@ -130,8 +142,8 @@
                                     <div class="span6">
                                         <div class="social-list">
                                             <ul>
-                                                <li><a href="https://www.facebook.com/da.etsie.upv?ref=br_tf"  target="_blank" class="transition elem"><i class="fa fa-facebook"></i></a></li>
-                                                <li><a href="https://twitter.com/delegacionetsie"  target="_blank" class="transition elem"><i class="fa fa-twitter"></i></a></li>
+                                                <li><a href="https://www.facebook.com/da.etsie.upv?ref=br_tf" target="_blank" class="transition elem"><i class="fa fa-facebook"></i></a></li>
+                                                <li><a href="https://twitter.com/delegacionetsie" target="_blank" class="transition elem"><i class="fa fa-twitter"></i></a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -907,5 +919,7 @@
 		<script type="text/javascript" src="js/superslides.js"></script>
         <script type="text/javascript" src="js/scripts.js"></script>
 		<script type="text/javascript" src="js/initslideshow.js"></script>
+   
+   <script src="app/app.js"></script>
     </body>
 </html>

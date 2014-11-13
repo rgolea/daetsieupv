@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
-::selection {background: #950095; color:#950095; }
-::-moz-selection {background: #950095; color:#950095;}
+::selection {background: #950095; color:#292929; }
+::-moz-selection {background: #950095; color:#292929;}
  .button  , nav  a span , .arrow-nav a , .home-separator span , .about-button , .custom-skillbar ,   .services-holder li:hover , .serv-overlay , #options li.actcat, #options li:hover , .folio-overlay span, .popup-modal-dismiss  , #contact-form input[type="submit"] , #jprePercentage , .scroll-btn:after , .color-separator , .twitter-holder .customNavigation a , .testimonials-holder .customNavigation a , .clients-holder, .subscriptionForm input#submitButton , .contact-tooltip  , .scroll-nav a  , .about-image .customNavigation a ,.box-details h3:after , .social-list li a:before , #project-page-button a , .tagcloud a , .pagination a , .media-holder .customNavigation a{
 	background:#950095;
 }
