@@ -1,3 +1,8 @@
 {
-    "home": "Home"
+    "home": "Home",
+    "sports": "Sports",
+    "culture": "Culture",
+    "academic": "Academic",
+    "news": "News",
+    "contact": "Contact"
 }
