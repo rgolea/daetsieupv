@@ -1,0 +1,18 @@
+<div class="container" ng-controller="homeCtrl">
+  <div ng-repeat="url in urls">
+   <div class="input-group">
+       <input type="text" class="form-control" disabled placeholder="URL" ng-value="url.url">
+       <span class="input-group-btn">
+            <button class="btn btn-danger" type="button" ng-click="remove($index)"><span class="glyphicon glyphicon-remove"></span></button>
+      </span>
+   </div>
+   <hr>
+   </div>
+   <br>
+   <form ng-submit="add()" class="form-inline right" ng-if="urls.length<3">
+      <div class="form-group">
+       <input type="text" placeholder="URL" class="form-control" ng-model="post.url">
+       </div>
+       <input type="submit" value="Añadir" class="btn btn-primary right">
+   </form>
+</div>
