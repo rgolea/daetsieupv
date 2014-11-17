@@ -17,7 +17,7 @@ admin.value('Domain', {
         url: document.domain
 });
 
-admin.factory('Home', ['$resource', 'Domain', function($resource, Domain){
+admin.factory('Home', ['$resource', function($resource){
     return $resource('/homeres/:id', {id:'@id'});
 }]);
               

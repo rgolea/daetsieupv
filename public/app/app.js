@@ -27,3 +27,12 @@ app.controller('langCtrl', ['$scope', 'locale', function($scope, locale){
     $scope.setLocale = locale.setLocale;
 
 }]);
+
+app.directive('backImg', function(){
+    return function(scope, element, attrs){
+        var url = attrs.backImg;
+        element.css({
+            'background-image': 'url(' + url +')'
+        });
+    };
+});

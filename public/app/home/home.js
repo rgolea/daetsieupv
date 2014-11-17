@@ -1,9 +1,9 @@
 'use strict';
 
-admin.factory('Home', ['$resource', 'Domain', function($resource, Domain){
+app.factory('Home', ['$resource', function($resource){
     return $resource('/homeres/:id', {id:'@id'});
 }]);
 
-admin.controller('homeCtrl', ['$scope', 'Home', function($scope, Home){
+app.controller('homeCtrl', ['$scope', 'Home', function($scope, Home){
     $scope.imgs = Home.query();    
 }]);

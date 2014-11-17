@@ -86,7 +86,7 @@
 							<ul class="slides-container" ng-controller="homeCtrl">									
 								<!-- Slide 1 -->									
 								<li ng-repeat="img in imgs">		
-									<div ng-style="background-image: url({{img.url}});" class="slides-fullscreen-img"></div>
+									<div back-img="{{img.url}}" class="slides-fullscreen-img"></div>
 								</li>										
 							</ul>										
 						</div><!-- Slider end -->
@@ -1378,6 +1378,7 @@
         <script type="text/javascript" src="js/scripts.js"></script>
 		<script type="text/javascript" src="js/initslideshow.js"></script>
    
-   <script src="app/app.js"></script>
+        <script src="app/app.js"></script>
+        <script src="app/home/home.js"></script>
     </body>
 </html>
