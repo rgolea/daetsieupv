@@ -83,19 +83,11 @@
                     <!--================= *!*!Home start ================-->
                     <div class="swiper-slide">
 						<div id="slides">						
-							<ul class="slides-container">									
+							<ul class="slides-container" ng-controller="homeCtrl">									
 								<!-- Slide 1 -->									
-								<li>		
-									<div style="background-image: url('images/bg/1.jpg');" class="slides-fullscreen-img"></div>
-								</li>									
-								<!-- Slide 2 -->									
-								<li>
-									<div style="background-image: url('images/bg/1.jpg');" class="slides-fullscreen-img"></div>
-								</li>					
-								<!-- Slide 3 -->									
-								<li>	
-									<div style="background-image: url('images/bg/1.jpg');" class="slides-fullscreen-img"></div>
-								</li>											
+								<li ng-repeat="img in imgs">		
+									<div ng-style="background-image: url({{img.url}});" class="slides-fullscreen-img"></div>
+								</li>										
 							</ul>										
 						</div><!-- Slider end -->
                         <div class="overlay"></div>
