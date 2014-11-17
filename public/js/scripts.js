@@ -406,17 +406,18 @@ function initKrobs() {
             $("#submit").attr("disabled", "disabled");
             dpd.email.post({
                 to      : 'delegacion.etsie@gmail.com',
-                from: $('#email').val(),
-                subject : $('#name').val(),
+                from: $('#name').val(),
+                subject : 'WEB',
                 text    : [
                     'Mensaje web',
                     '',
-                    $('#comments').val()
+                    $('#comments').val(),
+                    'Responder:',
+                    $('#name').val(),
+                    $('#email').val()
                 ].join('\n')
             }, function ( err, results ) {
-                
-                console.log(err); console.log(results);
-                //document.getElementById("contactform").reset();
+                document.getElementById("contactform").reset();
             });
         });
         return false;

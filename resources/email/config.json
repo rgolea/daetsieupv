@@ -1,11 +1,11 @@
 {
 	"type": "Email",
-	"host": "smtp.upv.es",
-	"port": "587",
+	"host": "smtp.gmail.com",
+	"port": "465",
 	"ssl": true,
-	"username": "delegacion.etsie",
-	"password": "deleg@cion",
-	"defaultFromAddress": "delegacion.etsie@upv.es",
+	"username": "delegacion.etsie@gmail.com",
+	"password": "fslimljmhhsalezi",
+	"defaultFromAddress": "",
 	"defaultTemplate": "",
 	"internalOnly": false,
 	"productionOnly": false
