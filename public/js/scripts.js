@@ -405,7 +405,7 @@ function initKrobs() {
             $("#message").hide();
             $("#submit").attr("disabled", "disabled");
             dpd.email.post({
-                to      : 'delegacion.etsie@upv.es',
+                to      : 'delegacion.etsie@gmail.com',
                 from: $('#email').val(),
                 subject : $('#name').val(),
                 text    : [
@@ -414,7 +414,9 @@ function initKrobs() {
                     $('#comments').val()
                 ].join('\n')
             }, function ( err, results ) {
-                document.getElementById("contactform").reset();
+                
+                console.log(err); console.log(results);
+                //document.getElementById("contactform").reset();
             });
         });
         return false;

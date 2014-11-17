@@ -3,9 +3,9 @@
 	"host": "smtp.upv.es",
 	"port": "587",
 	"ssl": true,
-	"username": "delegacion.etsie@upv.es",
+	"username": "delegacion.etsie",
 	"password": "deleg@cion",
-	"defaultFromAddress": "",
+	"defaultFromAddress": "delegacion.etsie@upv.es",
 	"defaultTemplate": "",
 	"internalOnly": false,
 	"productionOnly": false
