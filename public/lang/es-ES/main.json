@@ -4,5 +4,14 @@
     "culture": "Cultura",
     "academic": "Académica",
     "news": "Noticias",
-    "contact": "Contactar"
+    "contact": "Contactar",
+    "tel": "Teléfono",
+    "email": "Email",
+    "location": "Ubicación",
+    "send": "Enviar Mensaje",
+    "message": "Mensaje",
+    "name": "Nombre",
+    "getintouch" : "CONTACTE CON NOSOTROS",
+    "contactmsg1": "Mensaje contactar arriba",
+    "contactmsg2": "Mensaje contactar a la derecha"
 }

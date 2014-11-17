@@ -1,0 +1,12 @@
+{
+	"type": "Email",
+	"host": "smtp.gmail.com",
+	"port": "465",
+	"ssl": true,
+	"username": "rgolea@gmail.com",
+	"password": "jcmwrbdmbbwasgwk",
+	"defaultFromAddress": "rgolea@gmail.com",
+	"defaultTemplate": "",
+	"internalOnly": false,
+	"productionOnly": false
+}

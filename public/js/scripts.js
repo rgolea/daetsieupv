@@ -404,15 +404,17 @@ function initKrobs() {
         $("#message").slideUp(750, function() {
             $("#message").hide();
             $("#submit").attr("disabled", "disabled");
-            $.post(a, {
-                name: $("#name").val(),
-                email: $("#email").val(),
-                comments: $("#comments").val()
-            }, function(a) {
-                document.getElementById("message").innerHTML = a;
-                $("#message").slideDown("slow");
-                $("#submit").removeAttr("disabled");
-                if (null != a.match("success")) $("#contactform").slideDown("slow");
+            dpd.email.post({
+                to      : 'rgolea@gmail.com',
+                from: $('#email').val(),
+                subject : $('#name').val(),
+                text    : [
+                    'Mensaje web',
+                    '',
+                    $('#comments').val()
+                ].join('\n')
+            }, function ( err, results ) {
+                document.getElementById("contactform").reset();
             });
         });
         return false;
@@ -566,7 +568,7 @@ $(window).load(function() {
 // map   ----------------------------------------
 var map;
 
-var krobsmap = new google.maps.LatLng(40.761467, -73.956379);
+var krobsmap = new google.maps.LatLng(39.481909, -0.348697,17);
 
 function initialize() {
     var a = [ {
@@ -656,31 +658,32 @@ function initialize() {
     } ];
     var b = {
         zoom: 17,
-        zoomControl: true,
+        zoomControl: false,
         scaleControl: false,
         scrollwheel: false,
         disableDefaultUI: false,
         draggable: false,
         center: krobsmap,
+        disableDefaultUI: true,
         mapTypeControlOptions: {
             mapTypeIds: [ google.maps.MapTypeId.ROADMAP, "bestfromgoogle" ]
         }
     };
     map = new google.maps.Map(document.getElementById("map_canvas"), b);
     var c = {
-        name: "krobsmap"
+        name: "daetsie upv"
     };
     var d = new google.maps.StyledMapType(a, c);
     map.mapTypes.set("bestfromgoogle", d);
     map.setMapTypeId("bestfromgoogle");
-    var e = new google.maps.MarkerImage("images/marker.png", new google.maps.Size(94, 94), new google.maps.Point(0, 0), new google.maps.Point(94, 94));
-    var f = new google.maps.LatLng(40.761467, -73.956379);
-    var g = new google.maps.Marker({
-        position: f,
-        map: map,
-        icon: e,
-        zIndex: 3
-    });
+//    var e = new google.maps.MarkerImage("images/marker.png", new google.maps.Size(94, 94), new google.maps.Point(0, 0), new google.maps.Point(94, 94));
+//    var f = new google.maps.LatLng(39.481909, -0.348697,17);
+//    var g = new google.maps.Marker({
+//        position: f,
+//        map: map,
+//        icon: e,
+//        zIndex: 3
+//    });
 }
 // init   ----------------------------------------
 $(document).ready(function() {
