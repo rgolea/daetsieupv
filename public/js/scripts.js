@@ -405,7 +405,7 @@ function initKrobs() {
             $("#message").hide();
             $("#submit").attr("disabled", "disabled");
             dpd.email.post({
-                to      : 'rgolea@gmail.com',
+                to      : 'delegacion.etsie@upv.es',
                 from: $('#email').val(),
                 subject : $('#name').val(),
                 text    : [
